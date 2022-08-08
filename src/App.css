@@ -1,38 +1,177 @@
-.App {
+:root {
+  --blue: #2f2fa2;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.title {
+  font-size: 2rem;
+  font-family: Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+}
+
+.favourite {
+  border: 2px solid black;
+  border-radius: 10px;
+  margin: 5px;
+  width: auto;
+  height: 120px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+
+
+.search-bar{
+  border-radius: 20px;
+  border: 1px solid grey;
+  height: 25px;
+  padding: 8px;
+  box-shadow: 1px 1px 4px 1px #3030307e;
+}
+
+.search-result-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
+  width: 70vw;
+  height: 30vh;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.search-result-wrapper h2 {
+  margin: 5px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.search-results-top{
   display: flex;
-  flex-direction: column;
+}
+
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.5rem;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+
+}
+
+.app {
+  background: var(--blue);
+  height: 25vh;
+  width: 100vw;
+}
+
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  place-items: center;}
+
+.center {
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  flex-direction: column;
+}
+
+.cryptos {
+  width: 70vw;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.crypto {
+  margin: 15px;
+  width: 70vw;
+  height: 60px;
+  background: rgb(246, 246, 246);
+  box-shadow: 1px 1px 6px 2px #a5a5a5;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-around;
+  place-items: center;
+}
+
+
+a {
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.display-box {
+  width: 70vw;
+  height: 30vh;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 2px 2px 8px 2px #3030307e;
+  margin: 20px;
+  overflow: scroll;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.display-headers {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.subheading{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  text-align: center;
+}
+
+.subheading h3 {
+  margin: 10px;
+}
+
+.crypto-icon-small {
+  width: 40px;
+}
+
+.crypto-icon-large {
+  width: 100px;
+}
+
+.red {
+  color: red;
+}
+
+.green {
+  color: green;
+}
+
+.display-chart{
+  width: 70vw;
+  height: auto;
+  flex-wrap: wrap;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 2px 2px 8px 2px #3030307e;
+  margin: 20px;
+}
+
+.chart-day-picker {
+  color: black;
+  display: flex;
+}
+
+.chart-day-picker h3 {
+  margin: 0px 10px;
+  cursor: pointer;
+}
+
+.selected-day {
+  text-decoration: underline;
 }
